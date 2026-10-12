@@ -1,0 +1,10 @@
+target_app:
+  url: http://demo-ai:8080/api/chat
+
+ascendai:
+  api_key: "REPLACE_WITH_STRAIKER_API_KEY"
+  max_workers: 5
+
+log:
+  level: info
+  file: /app/logs/ascendai_bridge.log

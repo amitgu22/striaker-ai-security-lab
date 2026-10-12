@@ -1,0 +1,19 @@
+{
+  "title": "AI Security Demo",
+  "schemaVersion": 39,
+  "version": 1,
+  "panels": [
+    {
+      "type": "timeseries",
+      "title": "HTTP Requests",
+      "gridPos": {"h": 8, "w": 12, "x": 0, "y": 0},
+      "targets": [{"expr": "sum(rate(http_server_requests_seconds_count{job=\"demo-ai\"}[1m]))"}]
+    },
+    {
+      "type": "timeseries",
+      "title": "HTTP Errors",
+      "gridPos": {"h": 8, "w": 12, "x": 12, "y": 0},
+      "targets": [{"expr": "sum(rate(http_server_requests_seconds_count{job=\"demo-ai\",status=~\"5..\"}[1m]))"}]
+    }
+  ]
+}

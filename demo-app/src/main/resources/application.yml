@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: ai-security-demo
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+
+ollama:
+  url: ${OLLAMA_URL:http://localhost:11434}
+  model: ${OLLAMA_MODEL:llama3.2}
+
+ai:
+  security-mode: ${AI_SECURITY_MODE:vulnerable}
